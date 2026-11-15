@@ -1,0 +1,8 @@
+.cache/
+_cc_index/
+__pycache__/
+*.log
+.tmp/
+listings/
+# over GitHub's 100 MB file limit; the PDF list of the same norms is kept
+sig/control-migratorio/2026-06-01_Normograma-Proceso-Gestion-Control-Migratorio-(Excel).xlsx

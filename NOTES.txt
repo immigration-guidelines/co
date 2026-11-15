@@ -1,0 +1,96 @@
+Colombia - published guidance for the officials who decide migration cases
+Checked 2026-11-15. Re-run: python3 download_co.py (from the folder above this one).
+
+Result in one paragraph
+Colombia publishes a substantial amount of real officer guidance, but only for one of
+its two authorities. Migración Colombia (UAEMC: border control, foreigners' registration
+and permits, enforcement/sanctions) publishes the working documents of its quality
+system for its three case-handling processes: a process manual, flow-chart procedures,
+and about 35 current guides (guías) and instructions (instructivos) written for migration
+officers - e.g. MCG.01 general instructions for border control (107 pages), MCG.03
+treatment of inadmitted/deported/expelled persons, MCG.04 control of children, MEG.02
+handling of extranjería applications, MEG.12 Temporary Protection Permit, MVG.12 the
+sanctions/deportation procedure, MVG.18 verification visits. These are the target
+material and all current versions were saved. The Foreign Ministry (Cancillería: visas,
+refugee status through CONARE, statelessness) publishes no officer guidance: only
+resolutions, and applicant information. Its internal visa and refugee procedures exist
+(codes DP-PT-150, DP-PT-168, DP-PT-173 are cited in a 2020 audit report) but sit in an
+internal "Sistema Maestro". Its website also refuses scripts (see below).
+
+What was saved (90 documents, 306 MB; 167 MB of that are two Excel files)
+  kind "guidance": 66
+    - 55 current quality-system documents of Migración Colombia (sig/): 1 process manual,
+      3 process characterisations, 10 procedures (xlsx flow charts), 27 guides and
+      annexes, 9 instructions, 2 x 2 "normograma" lists of applicable norms (PDF list
+      and an Excel workbook in which the cited acts are embedded as objects; the two
+      workbooks are 121 MB and 46 MB and were kept as published, not unpacked), plus
+      "Otras normas de Extranjería".
+    - 1 older guide still on the server but no longer linked (guias/: MVG.14 v3, human
+      rights and transitory migration rooms).
+    - 5 directivas (2016-2019) that adopt process documents; one is present twice
+      (listing page and package).
+    - 2 circulares (2020) and 3 legal opinions (conceptos) of the legal office.
+  kind "procedural act": 24 resolutions, 2013-2026 (three copies of Resolución 0971 de
+    2021 among them, from three sources): Migración Colombia resolutions on entry/stay/
+    exit (2061 de 2020, 2231 de 2021), the extranjería manuals (2201 de 2013, 1499 de
+    2018), identity cards, the Temporary Protection Statute for Venezuelans and its
+    certificates, sanctions (0360 de 2015, 2945 de 2020), and the Foreign Ministry's visa
+    resolution 5477 de 2022 with 12509 de 2024 and the PEP permit resolutions.
+  Dates: for acts, the date or year of the act. For quality-system documents there is no
+  stated approval date; the date column and file prefix carry the date stored in the
+  file itself (PDF creation date / Excel last-modified), which is close to, but not
+  exactly, the approval date of that version (2020-05 to 2026-09). The version number
+  is in the file name.
+
+Sources used
+- https://www.migracioncolombia.gov.co/planeacion-y-estadistica/procesos-y-procedimientos
+  ZIP packages per process. Taken: Gestión Control Migratorio, Gestión Verificación
+  Migratoria, Gestión Extranjería (all categories). Members are saved byte for byte;
+  the ZIPs are not kept (listings/zip-manifest.tsv records which member came from
+  which ZIP). Left out on purpose and listed in not-obtained.tsv: information-security
+  and records-management documents inside the extranjería package, Decreto 216 de 2021.
+  Not taken: the 13 support processes (strategy, IT, HR, citizen service, contracting,
+  finance, legal, records, discipline, audit...). The citizen-service package holds
+  service-desk guides (ERCG.04 Guía de Atención al Ciudadano, ERCG.14 appointments);
+  the legal package holds AGJG.04 (answering consultations) - not case-decision guidance.
+- https://www.migracioncolombia.gov.co/normativa-y-documentacion/normativa/ (circulares,
+  directivas, resoluciones, conceptos): 4 + 7 + 34 + 2 items listed; only those about
+  migration case handling were kept. The site now lists very few circulares and
+  directivas; most of the entity's directivas since 2012 are not on it.
+- https://nexusmigracion.cancilleria.gov.co/marcos-normativos/marco-normativo-nacional
+  (Foreign Ministry migration portal): 9 resolutions kept; laws, decrees (incl. Decreto
+  1067 de 2015 and Decreto 089 de 2025 on refugee matters), CONPES papers not taken.
+- robots.txt: www.migracioncolombia.gov.co has none (404); nexusmigracion allows the
+  paths used.
+
+Blocked or unreachable (not worked around)
+- www.cancilleria.gov.co / cancilleria.gov.co: Cloudflare "Just a moment" challenge,
+  HTTP 403, already on robots.txt. Not contacted again. This is where the ministry's
+  normograma lives (full text of Migración Colombia and ministry resolutions and
+  directivas since 2012, e.g. Resolución UAEMC 0760 de 2016 adopting the control manual
+  v4, 2357 de 2020 on sanctions, MRE 10434 de 2023 on statelessness, Directiva 011 de
+  2012), and the applicant pages on visas and refugee status.
+- sidn.ramajudicial.gov.co: HTTP 403 on robots.txt. Not used.
+- www.icbf.gov.co mirror of the same compilation: the documents are gone (redirect to
+  search).
+- runt.gov.co (copy of Directiva 002 de 2012, control instructions) and
+  normograma.supersalud.gov.co: connection timed out.
+- www.funcionpublica.gov.co, www.suin-juriscol.gov.co: TLS certificate chain not
+  verifiable from this machine; not used (verification was not disabled).
+- The Internet Archive was not queried for Colombia in this run; items that need it are
+  marked "needs web archive" in not-obtained.tsv.
+
+Refugee status (CONARE)
+No published guidance for decision-makers was found. The procedure is in Decreto 1067
+de 2015 (Title 3) as amended (a decree, not downloaded); the Cancillería publishes an
+applicant guide ("Guía Refugio en Colombia", 2023/2024) - applicant information, and on
+the blocked host. Migración Colombia's side of asylum at the border is covered in
+MCG.03 (section 5.6 "Refugio o asilo").
+
+Completeness doubts
+- Only the current version of each guide is published; earlier versions are not.
+- The packages sit in a folder named after a month ("SEPTIEMBRE"); they are replaced
+  periodically. The script finds them through the listing page, so a re-run after an
+  update adds the new versions next to the old ones.
+- Whether the embedded acts inside the two normograma workbooks include directivas not
+  otherwise published was not examined.
